@@ -14,7 +14,7 @@ Go code!
 */
 const server = require("./api/server");
 
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 3000;
 
 server.use(port, () => {
   console.log(`\n***Server listening on http://localhost:${port}***\n`);
