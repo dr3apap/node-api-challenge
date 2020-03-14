@@ -10,11 +10,11 @@ const server = express();
 server.use(express.json());
 
 server.use("/api/projects", logger, projectRouter);
-server.use("/api/action", logger, actionRouter);
+server.use("/api/actions", logger, actionRouter);
 
 server.get("/", (req, res) => {
   res.send(`<h2>Here is my first Node Express Project</h2>`);
-  console.lod("in the server");
+  console.log("in the server");
 });
 
 module.exports = server;

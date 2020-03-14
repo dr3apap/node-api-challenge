@@ -74,7 +74,9 @@ router.get("/:id/actions", validateProjectId, (req, res) => {
       if (actionsList) {
         res.status(200).json(actionsList);
       } else {
-        res.json({ message: "sorry, can't find actions with that id" });
+        res
+          .status(500)
+          .json({ message: "sorry, can't find actions with that id" });
       }
       next();
     })
